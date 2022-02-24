@@ -27,3 +27,8 @@
   transform: translateY(-50);
   color: white;
 }
+
+.content h1 {
+  font-size: 64px;
+  font-weight: 600;
+}
