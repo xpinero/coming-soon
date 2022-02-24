@@ -32,3 +32,24 @@
   font-size: 64px;
   font-weight: 600;
 }
+
+.content h1 span {
+  color: rgb(136,48,102);
+}
+
+.content button {
+  background: transparent;
+  border: 2px solid white;
+  outline: none;
+  padding: 12px 25px;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.content button img {
+  width: 18px;
+  margin-left: 10px;
+}
