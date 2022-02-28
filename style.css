@@ -53,3 +53,35 @@
   width: 18px;
   margin-left: 10px;
 }
+
+.launch-time {
+  display: flex;
+}
+
+.launch-time div {
+  flex-basis: 100px;
+}
+
+.launch-time div p {
+  font-size: 60px;
+  margin-bottom: -14px;
+}
+
+.coding-icon {
+  width: 650px;
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  animation: coding-icon 4s linear infinite;
+}
+
+@keyframes coding-icon {
+  0% {
+    bottom: 0;
+    opacity: 0;
+  }
+  100% {
+    bottom: 100%;
+    opacity: 2;
+  }
+}

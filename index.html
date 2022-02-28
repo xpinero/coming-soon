@@ -11,9 +11,43 @@
     <div class="content">
       <p>Website is under maintenance</p>
       <h1>We will be <span>launching</span> soon</h1>
-      <button type="button">CONTACT ME<img src="img/email icon.png">  </button>
+      <div class="launch-time">
+        <div>
+          <p>00</p>
+          <span>Days</span>
+        </div>
+        <div>
+          <p>00</p>
+          <span>Hours</span>
+        </div>
+        <div>
+          <p>00</p>
+          <span>Minutes</span>
+        </div>
+        <div>
+          <p>00</p>
+          <span>Seconds</span>
+        </div>
+      </div>
+      <button type="button">CONTACT ME<img src="img/email icon.png"></button>
     </div>
+    <img src="img/coding icon.png" class="coding-icon">
 </div>
+<script>
+  var countDownDate = new Date("May 23, 2022 00:00:00").getTime();
+  var x = setInterval(function(){
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+
+  },1000);
+</script>
         
 </body>
 </html>
