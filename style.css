@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+.button1 {
+  color: rgb(136, 48, 102);
+}
+
+.button1:hover {
+  background-color: rgb(122, 214, 21);
+  color: white;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
