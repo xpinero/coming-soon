@@ -5,13 +5,30 @@
   box-sizing: border-box;
 }
 
+.fa-brands {
+  color: rgb(96, 230, 185);
+}
+
+.fa-text {
+  color: rgb(207, 147, 207);
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.socials {
+  width: 30vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 40px 0; 
+}
+
 .button1 {
-  color: rgb(136, 48, 102);
+  color: white;
 }
 
 .button1:hover {
   background-color: rgb(122, 214, 21);
-  color: white;
+  color: rgb(136, 48, 102);
 }
 
 .container {
