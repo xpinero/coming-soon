@@ -5,6 +5,48 @@
   box-sizing: border-box;
 }
 
+.fa-brands {
+  color: rgb(96, 230, 185);
+}
+
+.fa-text {
+  color: rgb(207, 147, 207);
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.fa-text:hover {
+  color: aquamarine;
+}
+
+.social-title {
+  color: rgb(246,22,22);
+  font-size: 2vh;
+  font-family: 
+}
+
+.socials {
+  width: 30vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 40px 0; 
+}
+
+.button1 {
+  color: white;
+  text-decoration: none;
+  border-radius: 35px;
+}
+
+.button1:hover {
+  background-color: rgb(68,171,4);
+  color: rgb(136, 48, 102);
+}
+
+.button1 b {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
