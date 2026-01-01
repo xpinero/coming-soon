@@ -1,79 +1,559 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coming soon</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xaver Pinero | Explorer & Developer</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9891e180cd.js" crossorigin="anonymous"></script>
   </head>
+<body>
+    <!-- Cursor trail effect canvas -->
+    <canvas id="trail-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-logo">
+            <span class="logo-text">XP</span>
+            <span class="logo-compass">◈</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#blog" class="nav-link">Journal</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
 
-  <body>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="mobile-link">Home</a></li>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#projects" class="mobile-link">Projects</a></li>
+            <li><a href="#blog" class="mobile-link">Journal</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div>
+            <div class="mountain-layer mountain-far"></div>
+            <div class="mountain-layer mountain-mid"></div>
+            <div class="mountain-layer mountain-near"></div>
+            <div class="stars"></div>
+            <div class="aurora-glow"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-subtitle">
+                <span class="subtitle-line"></span>
+                Explorer • Developer • Dreamer
+                <span class="subtitle-line"></span>
+            </p>
+            <h1 class="hero-title">
+                <span class="title-line">Xaver</span>
+                <span class="title-line title-accent">Pinero</span>
+            </h1>
+            <p class="hero-tagline">Building digital trails through uncharted territories</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#about" class="btn btn-ghost">
+                    <span>Learn More</span>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll to explore</p>
+        </div>
+        <div class="hero-coordinates">
+            <span>40.7128° N, 74.0060° W</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-bg about-bg"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">The Journey</h2>
+                <div class="title-decoration">
+                    <span class="decoration-line"></span>
+                    <i class="fa-solid fa-mountain-sun"></i>
+                    <span class="decoration-line"></span>
+                </div>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-container">
+                    <div class="about-image">
+                        <div class="image-frame"></div>
+                        <div class="image-placeholder">
+                            <i class="fa-solid fa-compass"></i>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-count="50">0</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="12">0</span>
+                            <span class="stat-label">Countries</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="5">0</span>
+                            <span class="stat-label">Years Exp</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <p class="about-intro">
+                        Just as every mountain peak tells a story of perseverance, 
+                        every line of code I write carries the spirit of exploration.
+                    </p>
+                    <p class="about-text">
+                        I'm a developer who finds inspiration in the wilderness. When I'm not 
+                        crafting digital experiences, you'll find me chasing sunrises on remote 
+                        trails, capturing the aurora's dance, or mapping out my next adventure.
+                    </p>
+                    <p class="about-text">
+                        My approach to development mirrors my approach to hiking — methodical 
+                        preparation, adaptability in execution, and always keeping the summit in sight. 
+                        I believe the best solutions come from those who dare to explore beyond 
+                        the beaten path.
+                    </p>
+                    <div class="skills-container">
+                        <h3 class="skills-title">Trail Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fa-brands fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fa-brands fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fa-brands fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fa-brands fa-node-js"></i>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fa-solid fa-database"></i>
+                                <span>Databases</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fa-brands fa-figma"></i>
+                                <span>Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="section-bg projects-bg"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Expeditions</h2>
+                <div class="title-decoration">
+                    <span class="decoration-line"></span>
+                    <i class="fa-solid fa-route"></i>
+                    <span class="decoration-line"></span>
+                </div>
+                <p class="section-subtitle">Selected works from my digital journeys</p>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All Trails</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Live">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Code">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fa-solid fa-mountain"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Web Application</span>
+                        <h3 class="project-title">TrailMapper Pro</h3>
+                        <p class="project-description">
+                            An interactive hiking trail discovery platform with real-time weather 
+                            integration and community-driven reviews.
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Live">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Code">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fa-solid fa-campground"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Mobile App</span>
+                        <h3 class="project-title">WildCamp</h3>
+                        <p class="project-description">
+                            Find and book off-grid camping spots. Features offline maps 
+                            and survival tips for remote locations.
+                        </p>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>MapBox</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Live">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Code">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Web Application</span>
+                        <h3 class="project-title">Aurora Tracker</h3>
+                        <p class="project-description">
+                            Real-time aurora borealis forecasting with notification alerts 
+                            and best viewing location recommendations.
+                        </p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Python</span>
+                            <span>NASA API</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="design">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Live">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Code">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fa-solid fa-tree"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Design System</span>
+                        <h3 class="project-title">Wilderness UI</h3>
+                        <p class="project-description">
+                            A nature-inspired design system with organic components 
+                            and earth-tone color palettes.
+                        </p>
+                        <div class="project-tech">
+                            <span>Figma</span>
+                            <span>Storybook</span>
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="projects-cta">
+                <a href="https://github.com/xpinero/" class="btn btn-outline" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                    <span>Explore All Projects</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="section-bg blog-bg"></div>
     <div class="container">
-      <img src="img/xp logo.png" class="logo" />
-      <p class="social-title">Connect with me on :</p>
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/xaver-pinero/" class="fa-text"><i class="fa-brands fa-linkedin fa-2xl"></i> LinkedIn</a>
-        <a href="https://github.com/xpinero/" class="fa-text"><i class="fa-brands fa-github-square fa-2xl"></i> Github</a>
-        <a href="https://twitter.com/XaverPinero" class="fa-text"><i class="fa-brands fa-x-twitter fa-2xl"></i> Twitter</a>
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Field Journal</h2>
+                <div class="title-decoration">
+                    <span class="decoration-line"></span>
+                    <i class="fa-solid fa-feather-pointed"></i>
+                    <span class="decoration-line"></span>
+                </div>
+                <p class="section-subtitle">Stories from the trail and thoughts from the code</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card featured">
+                    <div class="blog-image">
+                        <div class="blog-placeholder">
+                            <i class="fa-solid fa-moon"></i>
+                        </div>
+                        <span class="blog-badge">Featured</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">
+                                <i class="fa-regular fa-calendar"></i>
+                                December 15, 2025
+                            </span>
+                            <span class="blog-read-time">
+                                <i class="fa-regular fa-clock"></i>
+                                8 min read
+                            </span>
+                        </div>
+                        <h3 class="blog-title">Chasing the Northern Lights: A Developer's Perspective</h3>
+                        <p class="blog-excerpt">
+                            How standing beneath the aurora in Iceland taught me patience in debugging 
+                            and the beauty of waiting for the perfect moment...
+                        </p>
+                        <a href="#" class="blog-link">
+                            <span>Read Full Story</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-placeholder">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">
+                                <i class="fa-regular fa-calendar"></i>
+                                December 8, 2025
+                            </span>
+                            <span class="blog-read-time">
+                                <i class="fa-regular fa-clock"></i>
+                                5 min read
+                            </span>
+                        </div>
+                        <h3 class="blog-title">Clean Code is Like a Well-Marked Trail</h3>
+                        <p class="blog-excerpt">
+                            The parallels between maintaining hiking trails and writing maintainable code...
+                        </p>
+                        <a href="#" class="blog-link">
+                            <span>Continue Reading</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-placeholder">
+                            <i class="fa-solid fa-tent"></i>
       </div>
-      <div class="content">
-        <p>Xaver Pinero's portfolio</p>
-        <h1>Pardon the dust, we will be <span>launching</span> soon</h1>
-        <div class="launch-time">
-          <div>
-            <p id="days">00</p>
-            <span>Days</span>
           </div>
-          <div>
-            <p id="hours">00</p>
-            <span>Hours</span>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">
+                                <i class="fa-regular fa-calendar"></i>
+                                November 22, 2025
+                            </span>
+                            <span class="blog-read-time">
+                                <i class="fa-regular fa-clock"></i>
+                                6 min read
+                            </span>
           </div>
-          <div>
-            <p id="minutes">00</p>
-            <span>Minutes</span>
+                        <h3 class="blog-title">Remote Work from Remote Places</h3>
+                        <p class="blog-excerpt">
+                            My setup for coding from mountain cabins and how to stay productive off-grid...
+                        </p>
+                        <a href="#" class="blog-link">
+                            <span>Continue Reading</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
           </div>
-          <div>
-            <p id="seconds">00</p>
-            <span>Seconds</span>
+                </article>
           </div>
         </div>
+    </section>
 
-        <button type="button" class="button1">
-          <a href="mailto:xaver@xaverpinero.com" class="button1">
-            <b>EMAIL ME</b>
-            <img src="img/email icon.png" />
-          </a>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-bg contact-bg"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Send a Signal</h2>
+                <div class="title-decoration">
+                    <span class="decoration-line"></span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span class="decoration-line"></span>
+                </div>
+                <p class="section-subtitle">Let's embark on a new adventure together</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-text">
+                        <p>
+                            Whether you have a project in mind, want to collaborate, 
+                            or just want to share trail recommendations — I'd love to hear from you.
+                        </p>
+                        <p>
+                            Currently based somewhere between coffee shops and mountain peaks.
+                        </p>
+                    </div>
+                    <div class="contact-methods">
+                        <a href="mailto:xaver@xaverpinero.com" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="method-details">
+                                <span class="method-label">Email</span>
+                                <span class="method-value">xaver@xaverpinero.com</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/xaver-pinero/" class="contact-method" target="_blank">
+                            <div class="method-icon">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <div class="method-details">
+                                <span class="method-label">LinkedIn</span>
+                                <span class="method-value">Connect with me</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/xpinero/" class="contact-method" target="_blank">
+                            <div class="method-icon">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+                            <div class="method-details">
+                                <span class="method-label">GitHub</span>
+                                <span class="method-value">View my code</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Muir" required>
+                        <span class="form-border"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="explorer@wilderness.com" required>
+                        <span class="form-border"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Let's build something amazing">
+                        <span class="form-border"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or just say hello..." required></textarea>
+                        <span class="form-border"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span>Send Message</span>
+                        <i class="fa-solid fa-paper-plane"></i>
         </button>
-        
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">XP</span>
+                <p class="footer-tagline">"The mountains are calling and I must go."</p>
+                <p class="footer-author">— John Muir</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/xaver-pinero/" class="social-link" target="_blank" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/xpinero/" class="social-link" target="_blank" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://twitter.com/XaverPinero" class="social-link" target="_blank" aria-label="Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Xaver Pinero. Crafted with ❤️ and ☕</p>
+                <p class="footer-coordinates">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Currently exploring new horizons
+                </p>
+                <p class="easter-egg-hint" title="↑↑↓↓←→←→BA">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <span>Old school gamers know the way...</span>
+                </p>
+            </div>
       </div>
-      <img src="img/coding icon.png" class="coding-icon" />
+        <div class="footer-decoration">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,120 L0,60 Q360,0 720,60 T1440,60 L1440,120 Z" fill="currentColor"/>
+            </svg>
     </div>
-    <script>
-      var countDownDate = new Date("August 23, 2025 00:00:00").getTime();
-      var x = setInterval(function () {
-        var now = new Date().getTime();
-        var distance = countDownDate - now;
+    </footer>
 
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("days").innerHTML = days;
-        document.getElementById("hours").innerHTML = hours;
-        document.getElementById("minutes").innerHTML = minutes;
-        document.getElementById("seconds").innerHTML = seconds;
-
-        if (distance < 0) {
-          clearInterval(x);
-          document.getElementById("days").innerHTML = "00";
-          document.getElementById("hours").innerHTML = "00";
-          document.getElementById("minutes").innerHTML = "00";
-          document.getElementById("seconds").innerHTML = "00";
-        }
-      }, 1000);
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
