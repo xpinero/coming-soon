@@ -561,5 +561,5 @@ document.addEventListener('keydown', (e) => {
 });
 
 console.log('%c🏔️ Welcome, fellow explorer!', 'font-size: 20px; font-weight: bold; color: #3dd68c;');
-console.log('%cBuilt with passion by Xaver Pinero', 'font-size: 14px; color: #9ca8a3;');
+console.log('%cBuilt with passion by Xaver Piñero', 'font-size: 14px; color: #9ca8a3;');
 
