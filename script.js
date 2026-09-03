@@ -52,8 +52,12 @@ function initNavigation() {
     // Smooth scroll for nav links
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
             const targetId = link.getAttribute('href');
+            if (!targetId || !targetId.startsWith('#')) {
+                return;
+            }
+
+            e.preventDefault();
             const target = document.querySelector(targetId);
             
             if (target) {
@@ -104,8 +108,15 @@ function initMobileMenu() {
     
     mobileLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
             const targetId = link.getAttribute('href');
+            if (!targetId || !targetId.startsWith('#')) {
+                toggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+                return;
+            }
+
+            e.preventDefault();
             const target = document.querySelector(targetId);
             
             // Close mobile menu

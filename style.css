@@ -205,6 +205,10 @@ button {
     color: var(--color-text-primary);
 }
 
+.nav-link-shop {
+    color: var(--color-aurora-green);
+}
+
 .nav-link:hover::after,
 .nav-link.active::after {
     width: 100%;
